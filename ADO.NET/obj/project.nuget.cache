@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "YXUnl+UDyr4fmCoLErFmmaJqB+QbHn4EXQxba5zt6XMKtXcOMMJCE2zlAz0T/ZE7qoPWXZGBSH0/3qYDzyBXsg==",
+  "success": true,
+  "projectFilePath": "/home/theo/RiderProjects/ADO.NET/ADO.NET/ADO.NET.csproj",
+  "expectedPackageFiles": [
+    "/home/theo/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "/home/theo/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "/home/theo/.nuget/packages/npgsql/8.0.2/npgsql.8.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
