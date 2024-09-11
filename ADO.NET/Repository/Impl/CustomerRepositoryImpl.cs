@@ -7,10 +7,16 @@ public class CustomerRepositoryImpl : ICustomerRepository
 {
     private readonly NpgsqlConnection _connection;
 
-    public CustomerRepositoryImpl(string? stringConnection)
+    public CustomerRepositoryImpl(NpgsqlConnection connection)
     {
-        _connection = new NpgsqlConnection(stringConnection);
+        _connection = connection;
     }
+
+
+    // public CustomerRepositoryImpl(string? stringConnection)
+    // {
+    //     _connection = new NpgsqlConnection(stringConnection);
+    // }
 
     public void Save(Customer customer)
     {

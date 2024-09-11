@@ -14,13 +14,17 @@ public class Program
          * executeReader = digunakan untuk eksekusi query DQL seperti select
          */
         //build connection database using string builder
-        NpgsqlConnectionStringBuilder stringBuilder = new NpgsqlConnectionStringBuilder();
-        stringBuilder.Host = "localhost";
-        stringBuilder.Port = 5432;
-        stringBuilder.Username = "postgres";
-        stringBuilder.Password = "1";
-        stringBuilder.Database = "tokonyadia";
-        var connect = stringBuilder.ToString();
+        // NpgsqlConnectionStringBuilder stringBuilder = new NpgsqlConnectionStringBuilder();
+        // stringBuilder.Host = "localhost";
+        // stringBuilder.Port = 5432;
+        // stringBuilder.Username = "postgres";
+        // stringBuilder.Password = "1";
+        // stringBuilder.Database = "tokonyadia";
+        // var connect = stringBuilder.ToString();
+        
+        // bisa juga membuat connection seperti ini
+        var connectionSting = "Host=localhost;Username=postgres;Password=1;Database=tokonyadia;Port=5432;";
+        NpgsqlConnection connect = new NpgsqlConnection(connectionSting);  
 
         ICustomerRepository customerRepository = new CustomerRepositoryImpl(connect);
         // customerRepository.Save(new Customer
@@ -59,8 +63,21 @@ public class Program
         
         // delete data
         
-        customerRepository.Delete(2);
+        // customerRepository.Delete(2);
+        
+        //GetAllData
+        var customers = customerRepository.GetAll();
+        var id = 1;
+        foreach (var cust in customers)
+        {
+            Console.WriteLine($"NO            : {id++}");
+            Console.WriteLine($"Nama Customer : {cust.Name}");
+            Console.WriteLine($"Nomor Telepon : {cust.PhoneNumber}");
+            Console.WriteLine($"Status        : {cust.IsActive}");
+            Console.WriteLine();
+        }
     }
+    
 
     private static void GetAllData(NpgsqlConnection connect)
     {
