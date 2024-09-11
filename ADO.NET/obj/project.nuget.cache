@@ -1,12 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "YXUnl+UDyr4fmCoLErFmmaJqB+QbHn4EXQxba5zt6XMKtXcOMMJCE2zlAz0T/ZE7qoPWXZGBSH0/3qYDzyBXsg==",
+  "dgSpecHash": "5QMJgiuRddA=",
   "success": true,
-  "projectFilePath": "/home/theo/RiderProjects/ADO.NET/ADO.NET/ADO.NET.csproj",
+  "projectFilePath": "/home/theo/RiderProjects/new ado/dotnet-crud-ado.net/ADO.NET/ADO.NET.csproj",
   "expectedPackageFiles": [
     "/home/theo/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "/home/theo/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/home/theo/.nuget/packages/npgsql/8.0.2/npgsql.8.0.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Npgsql' 8.0.2 has a known high severity vulnerability, https://github.com/advisories/GHSA-x9vc-6hfv-hg8c",
+      "libraryId": "Npgsql",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
